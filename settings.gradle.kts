@@ -1,0 +1,1 @@
+rootProject.name = "Maze-2021-Kotlin-WebGui"
