@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "me.francescomasala.robotics"
-version = "0.0.1"
+version = "2022-04-Alpha"
 application {
     mainClass.set("me.francescomasala.robotics.ApplicationKt")
 
@@ -22,6 +22,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.rabbitmq:amqp-client:5.14.2")
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-auth-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-host-common-jvm:$ktor_version")
