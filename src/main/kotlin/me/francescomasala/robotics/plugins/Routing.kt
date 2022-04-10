@@ -23,15 +23,6 @@ fun Application.configureRouting() {
         static("/static") {
             resources("static")
         }
-        install(StatusPages) {
-            exception<AuthenticationException> { call, cause ->
-                call.respond(HttpStatusCode.Unauthorized)
-            }
-            exception<AuthorizationException> { call, cause ->
-                call.respond(HttpStatusCode.Forbidden)
-            }
-
-        }
         get<MyLocation> {
             call.respondText("Location: name=${it.name}, arg1=${it.arg1}, arg2=${it.arg2}")
         }
